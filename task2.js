@@ -8,7 +8,7 @@ const async = require('async');
 const server = http.createServer((req, res) => {
     const parsedUrl = url.parse(req.url, true);
     if (req.method === 'GET' && parsedUrl.pathname === '/I/want/title/') {
-        const addresses = parsedUrl.query.address;
+        let addresses = parsedUrl.query.address;
         if (!Array.isArray(addresses)) {
             addresses = [addresses];
         }
