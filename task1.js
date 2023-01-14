@@ -1,4 +1,4 @@
-//Implemented this task using plain node.js http
+//Implemented this task using http plain node.js 
 const http = require("http");
 const url = require("url");
 const request = require("request");
@@ -11,10 +11,8 @@ const server = http.createServer((req, res) => {
     if (!Array.isArray(addresses)) {
       addresses = [addresses];
     }
-
     let titles = [];
     let completedRequests = 0;
-
     addresses.forEach((address) => {
       if (address) {
         if (!/^(f|ht)tps?:\/\//i.test(address)) {
