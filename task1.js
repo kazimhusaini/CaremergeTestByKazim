@@ -60,6 +60,3 @@ server.listen(3000, () => {
   console.log("Server started on port 3000");
 });
 
-// This server uses the http module to create the server, the url module to parse the request URL, the request module to make the requests to the specified URLs, and the cheerio library to parse the HTML and extract the title tags. The server listens on port 3000 and responds to the route GET /I/want/title/. The query string parameter address is expected to be passed in with one or more website addresses. The server makes a request to each of the specified addresses, extracts the title from the HTML using cheerio, then constructs an HTML page that lists the titles and sends it back to the client. If there is any error or invalid status code, it will return 'NO RESPONSE' or 'INVALID STATUS CODE' respectively. It also handle all other routes and return HTTP code 404.
-
-// This example uses only plain Node.js callbacks and no additional libraries, but it is important to note that using libraries like express can simplify the code and make it more readable.
